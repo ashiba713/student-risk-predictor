@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 from sklearn.linear_model import LogisticRegression
+import sklearn
+import joblib
 
 # Load data
 df = pd.read_csv("data/students.csv")
@@ -38,3 +40,4 @@ if st.button("Predict Risk"):
         st.error(f"⚠️ High Risk Detected (Probability: {prob:.2f})")
     else:
         st.success(f"✅ Low Risk (Probability: {prob:.2f})")
+
